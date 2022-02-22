@@ -1,3 +1,4 @@
+const express = require("express"); 
 const db = require("../db/db.json"); 
 const path = require("path"); 
 const fs = require("fs");
@@ -12,10 +13,10 @@ module.exports = function (app) {
     });
 
 
-app.post("/api/notes", (req, res) => {
+    app.post("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", (err, data) => {
         if (err) throw err; 
-        const notesData = JSON.parse(data); 
+        let notesData = JSON.parse(data); 
         notesData.push(req.body); 
         for (let i = 0; i < notesData.length; i++) {
             notesData[i].id = i + 1;
@@ -25,7 +26,7 @@ app.post("/api/notes", (req, res) => {
             res.send(db);
           });
     });
-});
+  });
 
 app.delete("/api/notes/:id", (req, res) => {
     fs.readFile("./db/db.json", (err, data) => {
