@@ -1,14 +1,22 @@
 {
-  "name": "note-taker",
+  "name": "takenote",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sammychvz17/TakeNote.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sammychvz17/TakeNote/issues"
+  },
+  "homepage": "https://github.com/Sammychvz17/TakeNote#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
